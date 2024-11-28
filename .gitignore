@@ -24,7 +24,6 @@ wheels/
 share/python-wheels/
 *.egg-info/
 .installed.cfg
-*.egg
 MANIFEST
 
 # PyInstaller
@@ -197,7 +196,7 @@ ca.cert
 .venv/
 certificates/
 .vscode/
-zxxx.txt
+zaaa.txt
 
 comet.credentials.env
 hopsworks.credentials.env

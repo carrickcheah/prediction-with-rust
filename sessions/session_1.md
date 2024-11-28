@@ -10,7 +10,7 @@
   - [x] rust analyzer
   - [x] ide -> cursor
 
-### How to install the Rust compiler and the Cargo package manager
+### Setting up the tools
 
 1. Install Rust  
    [Visit Rust's official site](https://www.rust-lang.org/tools/install)  
@@ -27,5 +27,6 @@
     ```bash  
     rustc --version  
     cargo --version
-    ```
+    ```  
 
+3. Install the 'rust-analyzer' extension.  
