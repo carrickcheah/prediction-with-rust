@@ -9,8 +9,7 @@ fn main() -> anyhow::Result<()> {
     println!("Starting training script...");
 
     // 1. Download external CSV file to disk
-    let _csv_file_path = download_csv_file()?;
-
+    let csv_file_path = download_csv_file()?;
 
     Ok(())
 }
