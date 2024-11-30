@@ -11,8 +11,31 @@ fn main() -> anyhow::Result<()> {
     // 1. Download external CSV file to disk
     let csv_file_path = download_csv_file()?;
 
+    // 2. Load file from disk into memory
+    let df = load_data(&csv_file_path)?;
+
+
+    // randomly split the data into training and testing sets
+    let (train_df, test_df) = df.random_split(0.8, None);
+
+    // 3. Prepare the data
+
+
+
+    // 4. Train an XGBoost model with this data
+
+
+
+    
+    // 5. Push this model to an AWS S3 bucket (model registry)
+
+
+
+
     Ok(())
 }
+
+
 
 
 // Downloads the external CSV file to disk
@@ -35,3 +58,10 @@ fn download_csv_file() -> anyhow::Result<String> {
 }
 
 
+// Load the CSV file from disk into Polaris DataFrame
+
+fn load_csv_file(file_path: &str) -> anyhow::Result<polaris::prelude::DataFrame> {
+    let df = polaris::prelude::DataFrame::read_csv(file_path)?;
+
+    Ok(df)
+}
